@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(-45deg, #090040, #471396, #52357B, #5459AC);
+    background-size: 400% 400%;
+    animation: gradient 5s ease infinite;
+    height: 100vh;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    font-family: 'Arial', sans-serif;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    
+    /* Glassmorphism effect */
+    /* background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    padding: 40px 60px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3); */
+    
+    /* Additional glass effects */
+    position: relative;
+    overflow: hidden;
+    
+    /* Prevent stretching */
+    width: auto;
+    max-width: 90%;
+    white-space: nowrap;
+}
+
+.content h1.bottom-to-top {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    overflow: hidden;
+    font-weight: 300;
+    animation: slideUpFromBottom 0.8s ease-out forwards;
+    transform: translateY(100%);
+    opacity: 0;
+}
+
+@keyframes slideUpFromBottom {
+    0% {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.profile-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-top: 20px;
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+    animation: slideUpFromBottom 0.8s ease-out forwards;
+    transform: translateY(100%);
+    opacity: 0;
+}
+
+.subtitle {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin-top: 20px;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    animation: slideUpFromBottom 0.8s ease-out forwards;
+    transform: translateY(100%);
+    opacity: 0;
+}
+
+.code-snippet {
+    margin: 25px auto 0;
+    padding: 8px 12px;
+    background: #1e1e1e;
+    border: 1px solid #3c3c3c;
+    border-radius: 8px;
+    font-family: 'Consolas', 'Courier New', monospace;
+    font-size: 0.9rem;
+    color: #d4d4d4;
+    text-align: left;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+    animation: slideUpFromBottom 0.8s ease-out forwards;
+    transform: translateY(100%);
+    opacity: 0;
+    display: inline-block;
+    max-width: fit-content;
+    line-height: 1.1;
+}
+
+.code-line {
+    overflow: hidden;
+    white-space: pre;
+    width: 0;
+    font-family: 'Consolas', 'Courier New', monospace;
+    line-height: 1.1;
+    margin: 0;
+    padding: 0;
+}
+
+.line1 {
+    animation: typewriter-line1 2s steps(20) 2s forwards;
+}
+
+.line2 {
+    animation: typewriter-line2 3.5s steps(80) 4s forwards;
+}
+
+.line2::after {
+    content: "";
+    border-right: 2px solid #d4d4d4;
+    animation: blink 1s infinite 7.5s;
+}
+
+@keyframes typewriter-line1 {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes typewriter-line2 {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes blink {
+    0%, 50% {
+        border-color: #d4d4d4;
+    }
+    51%, 100% {
+        border-color: transparent;
+    }
+}
+
+.code-snippet .keyword {
+    color: #569cd6;
+}
+
+.code-snippet .function {
+    color: #dcdcaa;
+}
+
+.code-snippet .string {
+    color: #ce9178;
+}
+
+.find-out-btn {
+    display: block;
+    margin: 20px auto 0;
+    padding: 12px 24px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 25px;
+    color: white;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+    animation: slideUpFromBottom 1s ease-out 8s forwards;
+    transform: translateY(100%);
+    opacity: 0;
+}
+
+.find-out-btn:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.4);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
