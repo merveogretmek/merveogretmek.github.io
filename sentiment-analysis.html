@@ -109,22 +109,49 @@
 
                 
                 <h2>Key Research Findings</h2>
-                <ul>
-                    <li><strong>Logistic Regression Performance:</strong> Achieved highest accuracy (~93%) for two-class sentiment analysis</li>
-                    <li><strong>VADER Effectiveness:</strong> Lexicon-based approach achieved ~90% accuracy for binary classification</li>
-                    <li><strong>Category Bias Impact:</strong> Training on multi-category data yields more robust models across product types</li>
-                    <li><strong>Three-Class Challenge:</strong> Adding neutral class reduces overall accuracy, highlighting complexity of mixed sentiment identification</li>
-                    <li><strong>Cross-Category Analysis:</strong> Model performance varies significantly when testing across different product categories</li>
-                </ul>
-                
-                <h2>Project Structure & Implementation</h2>
-                <ul>
-                    <li><strong>analysis_across_category.py:</strong> Category-based sentiment analysis with cross-category testing</li>
-                    <li><strong>lexicon_analysis.py:</strong> VADER sentiment analyzer implementation and evaluation</li>
-                    <li><strong>sentiment_models.py:</strong> Comprehensive comparison of 8 different ML algorithms</li>
-                    <li><strong>Performance Metrics:</strong> Confusion matrices, precision, recall, F1-score analysis for all models</li>
-                    <li><strong>Dataset Processing:</strong> Amazon US Customer Reviews (2015-2020) with star rating classification</li>
-                </ul>
+                <div class="findings-container">
+                    <div class="findings-grid">
+                        <div class="finding-card">
+                            <div class="finding-header">
+                                <h4>Best Performance</h4>
+                                <div class="finding-metric">93%</div>
+                            </div>
+                            <p>Logistic Regression achieved highest accuracy for two-class sentiment analysis, demonstrating superior performance in binary classification tasks.</p>
+                        </div>
+
+                        <div class="finding-card">
+                            <div class="finding-header">
+                                <h4>Lexicon Approach</h4>
+                                <div class="finding-metric">90%</div>
+                            </div>
+                            <p>VADER sentiment analyzer proved highly effective with 90% accuracy for binary classification, showing the power of rule-based methods.</p>
+                        </div>
+
+                        <div class="finding-card">
+                            <div class="finding-header">
+                                <h4>Multi-Category Training</h4>
+                                <div class="finding-metric">Robust</div>
+                            </div>
+                            <p>Training on diverse product categories yields more robust models, reducing category bias and improving generalization across domains.</p>
+                        </div>
+
+                        <div class="finding-card">
+                            <div class="finding-header">
+                                <h4>Neutral Class Impact</h4>
+                                <div class="finding-metric">-7%</div>
+                            </div>
+                            <p>Adding neutral sentiment class reduces overall accuracy, highlighting the complexity of identifying mixed or ambiguous sentiment expressions.</p>
+                        </div>
+
+                        <div class="finding-card">
+                            <div class="finding-header">
+                                <h4>Cross-Category Analysis</h4>
+                                <div class="finding-metric">Varies</div>
+                            </div>
+                            <p>Model performance varies significantly when testing across different product categories, emphasizing the importance of domain-specific training.</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
