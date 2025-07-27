@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sentiment Analysis with Amazon Reviews - Merve Öğretmek</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Project Detail Page -->
+    <section class="project-detail-page">
+        <div class="project-detail-content">
+            <div class="back-navigation">
+                <a href="index.html#projects-section" class="back-link">← Back to Projects</a>
+            </div>
+            
+            <div class="project-header">
+                <div class="project-image-large">
+                    <img src="src/sentiment_analysis.png" alt="Sentiment Analysis Project">
+                </div>
+                <div class="project-title-section">
+                    <h1>Sentiment Analysis on Amazon Customer Reviews</h1>
+                    <p class="project-subtitle">Bachelor's Thesis • Machine Learning • Natural Language Processing • Python</p>
+                </div>
+            </div>
+            
+            <div class="project-details">
+                <div class="project-section">
+                    <h2>Project Overview</h2>
+                    <p>This Bachelor's Thesis project titled "Machine Learning: A powerful tool for enhancing customer experience through sentiment analysis" explores how businesses can leverage sentiment analysis to interpret large volumes of customer reviews from Amazon. The research investigates how automating the classification of text into positive, negative, and neutral categories helps companies rapidly identify trends, strengths, and areas for product improvement using data-driven decisions.</p>
+                </div>
+                
+                <div class="project-section">
+                    <h2>Technical Stack</h2>
+                    <ul>
+                        <li><strong>Programming Language:</strong> Python 3.7+</li>
+                        <li><strong>Data Processing:</strong> pandas, numpy</li>
+                        <li><strong>Machine Learning:</strong> scikit-learn</li>
+                        <li><strong>Lexicon Analysis:</strong> vaderSentiment</li>
+                        <li><strong>Dataset:</strong> Amazon Customer US Reviews Dataset (2015-2020)</li>
+                        <li><strong>Text Vectorization:</strong> TF-IDF, CountVectorizer</li>
+                    </ul>
+                </div>
+                
+                <div class="project-section">
+                    <h2>Machine Learning Models Implemented</h2>
+                    <ul>
+                        <li><strong>Logistic Regression:</strong> Best performing model with ~93% accuracy</li>
+                        <li><strong>Decision Tree:</strong> Rule-based classification approach</li>
+                        <li><strong>K-Nearest Neighbors (KNN):</strong> Instance-based learning algorithm</li>
+                        <li><strong>Support Vector Machines:</strong> Both Linear SVC and One-vs-One SVM</li>
+                        <li><strong>Gaussian Naive Bayes:</strong> Probabilistic classifier</li>
+                        <li><strong>Multilayer Perceptron (MLP):</strong> Neural network approach</li>
+                        <li><strong>Quadratic Discriminant Analysis:</strong> Statistical classification method</li>
+                        <li><strong>VADER Sentiment Analyzer:</strong> Lexicon and rule-based approach (~90% accuracy)</li>
+                    </ul>
+                </div>
+                
+                <div class="project-section">
+                    <h2>Key Research Findings</h2>
+                    <ul>
+                        <li><strong>Logistic Regression Performance:</strong> Achieved highest accuracy (~93%) for two-class sentiment analysis</li>
+                        <li><strong>VADER Effectiveness:</strong> Lexicon-based approach achieved ~90% accuracy for binary classification</li>
+                        <li><strong>Category Bias Impact:</strong> Training on multi-category data yields more robust models across product types</li>
+                        <li><strong>Three-Class Challenge:</strong> Adding neutral class reduces overall accuracy, highlighting complexity of mixed sentiment identification</li>
+                        <li><strong>Cross-Category Analysis:</strong> Model performance varies significantly when testing across different product categories</li>
+                    </ul>
+                </div>
+                
+                <div class="project-section">
+                    <h2>Project Structure & Implementation</h2>
+                    <ul>
+                        <li><strong>analysis_across_category.py:</strong> Category-based sentiment analysis with cross-category testing</li>
+                        <li><strong>lexicon_analysis.py:</strong> VADER sentiment analyzer implementation and evaluation</li>
+                        <li><strong>sentiment_models.py:</strong> Comprehensive comparison of 8 different ML algorithms</li>
+                        <li><strong>Performance Metrics:</strong> Confusion matrices, precision, recall, F1-score analysis for all models</li>
+                        <li><strong>Dataset Processing:</strong> Amazon US Customer Reviews (2015-2020) with star rating classification</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <div class="bottom-bar">
+        <a href="https://drive.google.com/file/d/1U2ID_n6oYwzcxhsBFmIJMBXO21GmLR9S/view?usp=sharing" target="_blank" class="bottom-link">
+            <span>CV</span>
+        </a>
+        <a href="https://github.com/merveogretmek" target="_blank" class="bottom-link">
+            <span>GitHub</span>
+        </a>
+        <a href="https://www.linkedin.com/in/merve-ogretmek/" target="_blank" class="bottom-link">
+            <span>LinkedIn</span>
+        </a>
+        <a href="mailto:merve.ogretmek@gmail.com" class="bottom-link">
+            <span>Contact</span>
+        </a>
+    </div>
+</body>
+</html>

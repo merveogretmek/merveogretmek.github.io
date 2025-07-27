@@ -5,28 +5,88 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Animated Purple Background</title>
     <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
 </head>
 <body>
-    <div class="content">
-        <h1 class="bottom-to-top"> Hello, I am Merve 👋 !</h1>
-        <img src="src/image.jpeg" alt="Merve" class="profile-photo">
-        <p class="subtitle">and, I am a Data Scientist</p>
-        <div class="code-snippet">
-            <div class="code-line line1"><span class="keyword">def</span> <span class="function">introduction</span>():</div>
-            <div class="code-line empty-line"></div>
-            <div class="code-line line2">    <span class="keyword">return</span> <span class="string">"Transforming questions into insights, one dataset at a time."</span></div>
-        </div>
-        <div class="navigation-cards">
-            <div class="nav-card">
-                <h3>About</h3>
-                <p>Learn more about me</p>
+    <!-- Intro Section -->
+    <section id="intro-section" class="intro-page">
+        <div class="content">
+            <h1 class="bottom-to-top"> Hello, I am Merve! 👋 </h1>
+            <img src="src/image.jpeg" alt="Merve" class="profile-photo">
+            <p class="subtitle">and, I am a Data Scientist</p>
+            <div class="code-snippet">
+                <div class="code-line line1"><span class="keyword">def</span> <span class="function">introduction</span>():</div>
+                <div class="code-line empty-line"></div>
+                <div class="code-line line2">    <span class="keyword">return</span> <span class="string">"Transforming questions into insights, one dataset at a time."</span></div>
             </div>
-            <div class="nav-card">
-                <h3>Projects</h3>
-                <p>See my work</p>
+            <div class="navigation-cards">
+                <div class="nav-card">
+                    <h3>Projects</h3>
+                    <p>See my work</p>
+                </div>
+                <div class="nav-card">
+                    <h3>About</h3>
+                    <p>Learn more about me</p>
+                </div>
             </div>
         </div>
-    </div>
+    </section>
+    
+    <!-- Projects Section -->
+    <section id="projects-section" class="page-section">
+        <div class="section-content">
+            <h2>Projects</h2>
+            <p>Here are some of the projects I've worked on. Each project showcases different aspects of my data science skills and expertise.</p>
+            
+            <div class="project-container">
+                <div class="project-image">
+                    <img src="src/sentiment_analysis.png" alt="Sentiment Analysis Project">
+                </div>
+                <div class="project-info">
+                    <h3><a href="sentiment-analysis.html" class="project-link">Sentiment Analysis on Amazon Customer Reviews</a></h3>
+                    <p>A comprehensive Bachelor's Thesis project exploring how machine learning enhances customer experience through sentiment analysis. Analyzes Amazon reviews (2015-2020) using multiple ML algorithms including Logistic Regression, Decision Trees, and VADER lexicon-based approaches, achieving 93% accuracy in sentiment classification.</p>
+                </div>
+            </div>
+            
+            <div class="project-container">
+                <div class="project-image">
+                    <img src="src/financial_news.png" alt="Financial News Scraper Project">
+                </div>
+                <div class="project-info">
+                    <h3><a href="financial-news-scraper.html" class="project-link">Financial News Scraper</a></h3>
+                    <p>An automated web scraping system that collects and analyzes financial news from multiple sources. Built with Python and BeautifulSoup, the system extracts market insights, tracks sentiment trends, and provides real-time financial data aggregation for investment analysis and market research.</p>
+                </div>
+            </div>
+            
+            <div class="project-container">
+                <div class="project-image">
+                    <img src="src/triage_tool.png" alt="Triage Tool App Project">
+                </div>
+                <div class="project-info">
+                    <h3><a href="triage-tool-app.html" class="project-link">Triage Tool App</a></h3>
+                    <p>A smart healthcare triage application that uses machine learning algorithms to assess patient symptoms and prioritize medical care. Built with Python and React, the system provides real-time decision support for healthcare professionals, improving patient flow and emergency response efficiency in medical facilities.</p>
+                </div>
+            </div>
+            
+            <div class="project-container">
+                <div class="project-image">
+                    <img src="src/webform.png" alt="Webform Filling Automation Project">
+                </div>
+                <div class="project-info">
+                    <h3><a href="webform-filling-automation.html" class="project-link">Webform Filling Automation</a></h3>
+                    <p>An intelligent automation tool that streamlines repetitive webform filling tasks using Python and Selenium. The system features smart data mapping, dynamic form recognition, and batch processing capabilities, reducing manual data entry time by 85% while maintaining high accuracy and reliability across various web platforms.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- About Section -->
+    <section id="about-section" class="page-section">
+        <div class="section-content">
+            <h2>About Me</h2>
+            <p>Welcome to my About section. Here you can learn more about my background, interests, and journey as a Data Scientist.</p>
+        </div>
+    </section>
     
     <div class="bottom-bar">
         <a href="https://drive.google.com/file/d/1U2ID_n6oYwzcxhsBFmIJMBXO21GmLR9S/view?usp=sharing" target="_blank" class="bottom-link">
