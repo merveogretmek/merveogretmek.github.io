@@ -19,70 +19,85 @@
                     <img src="src/triage_tool.png" alt="Triage Tool App Project">
                 </div>
                 <div class="project-title-section">
-                    <h1>Triage Tool App</h1>
-                    <p class="project-subtitle">Healthcare Technology • Machine Learning • React • Python</p>
+                    <h1>Endoscopy Triage & Diagnosis Tool</h1>
+                    <p class="project-subtitle">Clinical Decision Support • R Shiny • Random Forest • Healthcare Analytics</p>
                 </div>
             </div>
             
             <div class="project-details">
                 <div class="project-section">
                     <h2>Project Overview</h2>
-                    <p>A comprehensive healthcare triage application designed to revolutionize patient assessment and care prioritization in medical facilities. The system uses advanced machine learning algorithms to analyze patient symptoms, medical history, and vital signs to provide intelligent triage recommendations. This tool enhances healthcare efficiency by ensuring critical patients receive immediate attention while optimizing resource allocation.</p>
+                    <p>A specialized Shiny web application designed to assist clinicians in diagnosing and triaging patients with gastrointestinal bleeding. The tool uses Random Forest machine learning models trained on clinical data to provide probabilistic predictions for bleeding source identification, urgent endoscopy necessity, and appropriate patient disposition. This clinical decision support system helps healthcare professionals make data-driven decisions while maintaining the primacy of clinical judgment.</p>
                 </div>
                 
                 <div class="project-section">
                     <h2>Technical Stack</h2>
                     <ul>
-                        <li><strong>Frontend:</strong> React.js, TypeScript, Material-UI</li>
-                        <li><strong>Backend:</strong> Python, FastAPI, SQLAlchemy</li>
-                        <li><strong>Machine Learning:</strong> scikit-learn, TensorFlow, pandas, numpy</li>
-                        <li><strong>Database:</strong> PostgreSQL, Redis for caching</li>
-                        <li><strong>Authentication:</strong> JWT tokens, OAuth 2.0</li>
-                        <li><strong>Deployment:</strong> Docker, AWS, Nginx</li>
-                        <li><strong>Monitoring:</strong> Prometheus, Grafana</li>
+                        <li><strong>Programming Language:</strong> R (version 4.0+)</li>
+                        <li><strong>Web Framework:</strong> Shiny for interactive web applications</li>
+                        <li><strong>Machine Learning:</strong> randomForest package for Random Forest models</li>
+                        <li><strong>Data Processing:</strong> dplyr, readr for data manipulation</li>
+                        <li><strong>Visualization:</strong> ggplot2 for custom prediction plots</li>
+                        <li><strong>Deployment:</strong> rsconnect for Shiny server deployment</li>
+                        <li><strong>Data Management:</strong> pins package for model versioning</li>
                     </ul>
                 </div>
                 
                 <div class="project-section">
-                    <h2>Key Features</h2>
+                    <h2>Clinical Prediction Models</h2>
                     <ul>
-                        <li>Intelligent symptom assessment and severity scoring</li>
-                        <li>Real-time patient queue management and prioritization</li>
-                        <li>Integration with electronic health records (EHR)</li>
-                        <li>Multi-language support for diverse patient populations</li>
-                        <li>Clinical decision support with evidence-based protocols</li>
-                        <li>Mobile-responsive design for tablets and smartphones</li>
-                        <li>Role-based access control for healthcare staff</li>
-                        <li>Analytics dashboard for operational insights</li>
-                        <li>Automated alerts for critical patient conditions</li>
-                        <li>HIPAA-compliant data security and privacy</li>
+                        <li><strong>Bleeding Source Prediction:</strong> Classifies GI bleeding as upper, mid, or lower gastrointestinal</li>
+                        <li><strong>Urgent Endoscopy Assessment:</strong> Determines the need for immediate endoscopic intervention</li>
+                        <li><strong>Patient Disposition:</strong> Recommends ICU vs. non-ICU placement based on severity</li>
+                        <li><strong>Resuscitation Needs:</strong> Evaluates immediate resuscitation requirements</li>
                     </ul>
                 </div>
                 
                 <div class="project-section">
-                    <h2>Machine Learning Models</h2>
+                    <h2>Application Features</h2>
                     <ul>
-                        <li><strong>Symptom Classification:</strong> Multi-class classification for symptom severity</li>
-                        <li><strong>Risk Stratification:</strong> Predictive models for patient deterioration</li>
-                        <li><strong>Resource Allocation:</strong> Optimization algorithms for staff and room assignment</li>
-                        <li><strong>Wait Time Prediction:</strong> Regression models for accurate time estimates</li>
-                        <li><strong>Natural Language Processing:</strong> Text analysis of patient complaints</li>
+                        <li>Interactive web interface for clinical data entry</li>
+                        <li>Real-time probabilistic predictions using Random Forest models</li>
+                        <li>Custom ggplot2 visualizations showing prediction confidence</li>
+                        <li>Feature importance display for model interpretability</li>
+                        <li>Physician diagnosis input fields for comparison and validation</li>
+                        <li>Demographic and clinical parameter collection (hematemesis, melena, vital signs, lab values)</li>
+                        <li>Compute and refresh functionality for multiple patient assessments</li>
+                        <li>Stacked bar plots for easy interpretation of prediction results</li>
                     </ul>
                 </div>
                 
                 <div class="project-section">
-                    <h2>Impact & Results</h2>
-                    <p>Successfully deployed in 3 healthcare facilities, resulting in a 40% reduction in patient wait times and 25% improvement in emergency response efficiency. The ML models achieve 94% accuracy in severity assessment and have helped identify critical patients 60% faster than traditional triage methods. The system has processed over 50,000 patient assessments with 99.8% uptime and zero security incidents.</p>
+                    <h2>Technical Architecture</h2>
+                    <ul>
+                        <li><strong>app.R:</strong> Main Shiny application with UI and server logic</li>
+                        <li><strong>createModels.R:</strong> Random Forest model training pipeline (model_S, model_R, model_E, model_D)</li>
+                        <li><strong>makePredictions.R:</strong> Prediction functions for processing new patient data</li>
+                        <li><strong>displayPlots.R:</strong> Custom ggplot2 visualization functions for model outputs</li>
+                        <li><strong>train_data.csv:</strong> Clinical training dataset for model development</li>
+                    </ul>
                 </div>
                 
                 <div class="project-section">
-                    <h2>Compliance & Security</h2>
+                    <h2>Workflow Process</h2>
                     <ul>
-                        <li>HIPAA compliance for patient data protection</li>
-                        <li>End-to-end encryption for data transmission</li>
-                        <li>Audit trails for all system interactions</li>
-                        <li>Regular security assessments and penetration testing</li>
-                        <li>FDA guidelines compliance for medical software</li>
+                        <li><strong>Data Input:</strong> Clinicians enter demographic and clinical data through Shiny UI</li>
+                        <li><strong>Model Processing:</strong> Four Random Forest models process input data simultaneously</li>
+                        <li><strong>Probability Generation:</strong> Each model outputs probabilistic predictions for its specific outcome</li>
+                        <li><strong>Visualization:</strong> Results displayed as stacked bar plots with feature importance rankings</li>
+                        <li><strong>Clinical Integration:</strong> Predictions complement physician judgment for enhanced decision-making</li>
+                    </ul>
+                </div>
+                
+                <div class="project-section">
+                    <h2>Clinical Applications & Disclaimers</h2>
+                    <ul>
+                        <li><strong>Decision Support:</strong> Provides probabilistic guidance for complex GI bleeding cases</li>
+                        <li><strong>Educational Tool:</strong> Demonstrates machine learning applications in clinical settings</li>
+                        <li><strong>Research Platform:</strong> Framework for developing additional clinical prediction models</li>
+                        <li><strong>Important Note:</strong> Intended as demonstration tool, not replacement for clinical judgment</li>
+                        <li><strong>Compliance:</strong> Users must ensure healthcare privacy law compliance with patient data</li>
+                        <li><strong>Validation:</strong> Not approved as medical device - requires clinical validation for deployment</li>
                     </ul>
                 </div>
             </div>

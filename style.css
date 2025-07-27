@@ -435,6 +435,26 @@ body {
     text-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
 }
 
+.github-link {
+    display: inline-block;
+    margin-left: 12px;
+    vertical-align: middle;
+    color: rgba(255, 255, 255, 0.8);
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.github-link:hover {
+    color: white;
+    transform: scale(1.1);
+}
+
+.github-icon {
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+}
+
 .project-info p {
     font-family: 'Quicksand', sans-serif;
     font-size: 1rem;
