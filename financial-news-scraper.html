@@ -25,75 +25,63 @@
             </div>
             
             <div class="project-details">
-                <div class="project-section">
-                    <h2>Project Overview</h2>
-                    <p>A sophisticated Python-based scraping system that automatically downloads, parses, and processes daily financial bulletins from major Turkish brokerage firms. The system extracts company news items from PDF documents, performs intelligent ticker symbol matching against BIST-traded stocks, and aggregates all data into a structured CSV format for comprehensive financial analysis and market research.</p>
-                </div>
+                <h2>Project Overview</h2>
+                <p>A sophisticated Python-based scraping system that automatically downloads, parses, and processes daily financial bulletins from major Turkish brokerage firms. The system extracts company news items from PDF documents, performs intelligent ticker symbol matching against BIST-traded stocks, and aggregates all data into a structured CSV format for comprehensive financial analysis and market research.</p>
                 
-                <div class="project-section">
-                    <h2>Technical Stack</h2>
-                    <ul>
-                        <li><strong>Programming Language:</strong> Python 3.7+</li>
-                        <li><strong>Web Automation:</strong> Selenium WebDriver with ChromeDriver</li>
-                        <li><strong>PDF Processing:</strong> pdfminer for text extraction</li>
-                        <li><strong>Data Processing:</strong> pandas, numpy</li>
-                        <li><strong>Web Requests:</strong> requests library</li>
-                        <li><strong>Fuzzy Matching:</strong> fuzzywuzzy for ticker symbol validation</li>
-                        <li><strong>Data Storage:</strong> CSV file format for structured data</li>
-                        <li><strong>Text Processing:</strong> Regular expressions for pattern matching</li>
-                    </ul>
-                </div>
+                <h2>Technical Stack</h2>
+                <ul>
+                    <li><strong>Programming Language:</strong> Python 3.7+</li>
+                    <li><strong>Web Automation:</strong> Selenium WebDriver with ChromeDriver</li>
+                    <li><strong>PDF Processing:</strong> pdfminer for text extraction</li>
+                    <li><strong>Data Processing:</strong> pandas, numpy</li>
+                    <li><strong>Web Requests:</strong> requests library</li>
+                    <li><strong>Fuzzy Matching:</strong> fuzzywuzzy for ticker symbol validation</li>
+                    <li><strong>Data Storage:</strong> CSV file format for structured data</li>
+                    <li><strong>Text Processing:</strong> Regular expressions for pattern matching</li>
+                </ul>
                 
-                <div class="project-section">
-                    <h2>Brokerage Firms Covered</h2>
-                    <ul>
-                        <li><strong>Oyak Yatırım:</strong> Direct PDF download and parsing</li>
-                        <li><strong>Piramit Menkul Kıymetler:</strong> Selenium-based navigation and extraction</li>
-                        <li><strong>Tacirler Yatırım:</strong> Automated web browsing with Selenium</li>
-                        <li><strong>Vakıf Yatırım:</strong> Dynamic content handling with Selenium</li>
-                        <li><strong>Ziraat Yatırım:</strong> PDF processing with direct download</li>
-                    </ul>
-                </div>
+                <h2>Brokerage Firms Covered</h2>
+                <ul>
+                    <li><strong>Oyak Yatırım:</strong> Direct PDF download and parsing</li>
+                    <li><strong>Piramit Menkul Kıymetler:</strong> Selenium-based navigation and extraction</li>
+                    <li><strong>Tacirler Yatırım:</strong> Automated web browsing with Selenium</li>
+                    <li><strong>Vakıf Yatırım:</strong> Dynamic content handling with Selenium</li>
+                    <li><strong>Ziraat Yatırım:</strong> PDF processing with direct download</li>
+                </ul>
                 
-                <div class="project-section">
-                    <h2>Key Features & Workflow</h2>
-                    <ul>
-                        <li>Automated daily PDF bulletin downloads from multiple brokerage websites</li>
-                        <li>PDF-to-text conversion using pdfminer for content extraction</li>
-                        <li>Regular expression-based parsing to identify "company news" sections</li>
-                        <li>Intelligent ticker symbol extraction and validation against BIST stock codes</li>
-                        <li>Fuzzy matching algorithms to ensure accurate symbol identification</li>
-                        <li>Structured data aggregation with timestamp and source tracking</li>
-                        <li>Master CSV file management for consolidated financial data</li>
-                        <li>Robust error handling for PDF format changes and website updates</li>
-                        <li>Logging system for monitoring daily operations and data availability</li>
-                    </ul>
-                </div>
+                <h2>Key Features & Workflow</h2>
+                <ul>
+                    <li>Automated daily PDF bulletin downloads from multiple brokerage websites</li>
+                    <li>PDF-to-text conversion using pdfminer for content extraction</li>
+                    <li>Regular expression-based parsing to identify "company news" sections</li>
+                    <li>Intelligent ticker symbol extraction and validation against BIST stock codes</li>
+                    <li>Fuzzy matching algorithms to ensure accurate symbol identification</li>
+                    <li>Structured data aggregation with timestamp and source tracking</li>
+                    <li>Master CSV file management for consolidated financial data</li>
+                    <li>Robust error handling for PDF format changes and website updates</li>
+                    <li>Logging system for monitoring daily operations and data availability</li>
+                </ul>
                 
-                <div class="project-section">
-                    <h2>Script Architecture</h2>
-                    <ul>
-                        <li><strong>oyak_yatirim.py:</strong> Handles Oyak Yatırım bulletin downloads and parsing</li>
-                        <li><strong>piramit_yatirim.py:</strong> Selenium-based scraper for Piramit Menkul Kıymetler</li>
-                        <li><strong>tacirler_yatirim.py:</strong> Automated extraction from Tacirler Yatırım bulletins</li>
-                        <li><strong>vakif_yatirim.py:</strong> Dynamic content handling for Vakıf Yatırım</li>
-                        <li><strong>ziraat_yatirim.py:</strong> Direct download processing for Ziraat Yatırım</li>
-                        <li><strong>Shared CSV Database:</strong> Centralized storage for all extracted news items</li>
-                        <li><strong>BIST Ticker Reference:</strong> Master list for fuzzy matching validation</li>
-                    </ul>
-                </div>
+                <h2>Script Architecture</h2>
+                <ul>
+                    <li><strong>oyak_yatirim.py:</strong> Handles Oyak Yatırım bulletin downloads and parsing</li>
+                    <li><strong>piramit_yatirim.py:</strong> Selenium-based scraper for Piramit Menkul Kıymetler</li>
+                    <li><strong>tacirler_yatirim.py:</strong> Automated extraction from Tacirler Yatırım bulletins</li>
+                    <li><strong>vakif_yatirim.py:</strong> Dynamic content handling for Vakıf Yatırım</li>
+                    <li><strong>ziraat_yatirim.py:</strong> Direct download processing for Ziraat Yatırım</li>
+                    <li><strong>Shared CSV Database:</strong> Centralized storage for all extracted news items</li>
+                    <li><strong>BIST Ticker Reference:</strong> Master list for fuzzy matching validation</li>
+                </ul>
                 
-                <div class="project-section">
-                    <h2>Technical Challenges & Solutions</h2>
-                    <ul>
-                        <li><strong>PDF Format Variations:</strong> Implemented robust parsing with pdfminer to handle different bulletin layouts</li>
-                        <li><strong>Dynamic Web Content:</strong> Used Selenium WebDriver to handle JavaScript-heavy brokerage websites</li>
-                        <li><strong>Ticker Symbol Accuracy:</strong> Deployed fuzzywuzzy for intelligent matching against BIST reference data</li>
-                        <li><strong>Error Resilience:</strong> Built comprehensive exception handling for PDFSyntaxError and NoSuchElementException</li>
-                        <li><strong>Data Consistency:</strong> Standardized date/time formatting and source attribution across all scrapers</li>
-                        <li><strong>Website Changes:</strong> Modular design allows easy updates when brokerage sites modify their structure</li>
-                    </ul>
-                </div>
+                <h2>Technical Challenges & Solutions</h2>
+                <ul>
+                    <li><strong>PDF Format Variations:</strong> Implemented robust parsing with pdfminer to handle different bulletin layouts</li>
+                    <li><strong>Dynamic Web Content:</strong> Used Selenium WebDriver to handle JavaScript-heavy brokerage websites</li>
+                    <li><strong>Ticker Symbol Accuracy:</strong> Deployed fuzzywuzzy for intelligent matching against BIST reference data</li>
+                    <li><strong>Error Resilience:</strong> Built comprehensive exception handling for PDFSyntaxError and NoSuchElementException</li>
+                    <li><strong>Data Consistency:</strong> Standardized date/time formatting and source attribution across all scrapers</li>
+                    <li><strong>Website Changes:</strong> Modular design allows easy updates when brokerage sites modify their structure</li>
+                </ul>
             </div>
         </div>
     </section>

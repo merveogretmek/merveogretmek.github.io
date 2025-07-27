@@ -25,81 +25,67 @@
             </div>
             
             <div class="project-details">
-                <div class="project-section">
-                    <h2>Project Overview</h2>
-                    <p>A specialized Shiny web application designed to assist clinicians in diagnosing and triaging patients with gastrointestinal bleeding. The tool uses Random Forest machine learning models trained on clinical data to provide probabilistic predictions for bleeding source identification, urgent endoscopy necessity, and appropriate patient disposition. This clinical decision support system helps healthcare professionals make data-driven decisions while maintaining the primacy of clinical judgment.</p>
-                </div>
+                <h2>Project Overview</h2>
+                <p>A specialized Shiny web application designed to assist clinicians in diagnosing and triaging patients with gastrointestinal bleeding. The tool uses Random Forest machine learning models trained on clinical data to provide probabilistic predictions for bleeding source identification, urgent endoscopy necessity, and appropriate patient disposition. This clinical decision support system helps healthcare professionals make data-driven decisions while maintaining the primacy of clinical judgment.</p>
                 
-                <div class="project-section">
-                    <h2>Technical Stack</h2>
-                    <ul>
-                        <li><strong>Programming Language:</strong> R (version 4.0+)</li>
-                        <li><strong>Web Framework:</strong> Shiny for interactive web applications</li>
-                        <li><strong>Machine Learning:</strong> randomForest package for Random Forest models</li>
-                        <li><strong>Data Processing:</strong> dplyr, readr for data manipulation</li>
-                        <li><strong>Visualization:</strong> ggplot2 for custom prediction plots</li>
-                        <li><strong>Deployment:</strong> rsconnect for Shiny server deployment</li>
-                        <li><strong>Data Management:</strong> pins package for model versioning</li>
-                    </ul>
-                </div>
+                <h2>Technical Stack</h2>
+                <ul>
+                    <li><strong>Programming Language:</strong> R (version 4.0+)</li>
+                    <li><strong>Web Framework:</strong> Shiny for interactive web applications</li>
+                    <li><strong>Machine Learning:</strong> randomForest package for Random Forest models</li>
+                    <li><strong>Data Processing:</strong> dplyr, readr for data manipulation</li>
+                    <li><strong>Visualization:</strong> ggplot2 for custom prediction plots</li>
+                    <li><strong>Deployment:</strong> rsconnect for Shiny server deployment</li>
+                    <li><strong>Data Management:</strong> pins package for model versioning</li>
+                </ul>
                 
-                <div class="project-section">
-                    <h2>Clinical Prediction Models</h2>
-                    <ul>
-                        <li><strong>Bleeding Source Prediction:</strong> Classifies GI bleeding as upper, mid, or lower gastrointestinal</li>
-                        <li><strong>Urgent Endoscopy Assessment:</strong> Determines the need for immediate endoscopic intervention</li>
-                        <li><strong>Patient Disposition:</strong> Recommends ICU vs. non-ICU placement based on severity</li>
-                        <li><strong>Resuscitation Needs:</strong> Evaluates immediate resuscitation requirements</li>
-                    </ul>
-                </div>
+                <h2>Clinical Prediction Models</h2>
+                <ul>
+                    <li><strong>Bleeding Source Prediction:</strong> Classifies GI bleeding as upper, mid, or lower gastrointestinal</li>
+                    <li><strong>Urgent Endoscopy Assessment:</strong> Determines the need for immediate endoscopic intervention</li>
+                    <li><strong>Patient Disposition:</strong> Recommends ICU vs. non-ICU placement based on severity</li>
+                    <li><strong>Resuscitation Needs:</strong> Evaluates immediate resuscitation requirements</li>
+                </ul>
                 
-                <div class="project-section">
-                    <h2>Application Features</h2>
-                    <ul>
-                        <li>Interactive web interface for clinical data entry</li>
-                        <li>Real-time probabilistic predictions using Random Forest models</li>
-                        <li>Custom ggplot2 visualizations showing prediction confidence</li>
-                        <li>Feature importance display for model interpretability</li>
-                        <li>Physician diagnosis input fields for comparison and validation</li>
-                        <li>Demographic and clinical parameter collection (hematemesis, melena, vital signs, lab values)</li>
-                        <li>Compute and refresh functionality for multiple patient assessments</li>
-                        <li>Stacked bar plots for easy interpretation of prediction results</li>
-                    </ul>
-                </div>
+                <h2>Application Features</h2>
+                <ul>
+                    <li>Interactive web interface for clinical data entry</li>
+                    <li>Real-time probabilistic predictions using Random Forest models</li>
+                    <li>Custom ggplot2 visualizations showing prediction confidence</li>
+                    <li>Feature importance display for model interpretability</li>
+                    <li>Physician diagnosis input fields for comparison and validation</li>
+                    <li>Demographic and clinical parameter collection (hematemesis, melena, vital signs, lab values)</li>
+                    <li>Compute and refresh functionality for multiple patient assessments</li>
+                    <li>Stacked bar plots for easy interpretation of prediction results</li>
+                </ul>
                 
-                <div class="project-section">
-                    <h2>Technical Architecture</h2>
-                    <ul>
-                        <li><strong>app.R:</strong> Main Shiny application with UI and server logic</li>
-                        <li><strong>createModels.R:</strong> Random Forest model training pipeline (model_S, model_R, model_E, model_D)</li>
-                        <li><strong>makePredictions.R:</strong> Prediction functions for processing new patient data</li>
-                        <li><strong>displayPlots.R:</strong> Custom ggplot2 visualization functions for model outputs</li>
-                        <li><strong>train_data.csv:</strong> Clinical training dataset for model development</li>
-                    </ul>
-                </div>
+                <h2>Technical Architecture</h2>
+                <ul>
+                    <li><strong>app.R:</strong> Main Shiny application with UI and server logic</li>
+                    <li><strong>createModels.R:</strong> Random Forest model training pipeline (model_S, model_R, model_E, model_D)</li>
+                    <li><strong>makePredictions.R:</strong> Prediction functions for processing new patient data</li>
+                    <li><strong>displayPlots.R:</strong> Custom ggplot2 visualization functions for model outputs</li>
+                    <li><strong>train_data.csv:</strong> Clinical training dataset for model development</li>
+                </ul>
                 
-                <div class="project-section">
-                    <h2>Workflow Process</h2>
-                    <ul>
-                        <li><strong>Data Input:</strong> Clinicians enter demographic and clinical data through Shiny UI</li>
-                        <li><strong>Model Processing:</strong> Four Random Forest models process input data simultaneously</li>
-                        <li><strong>Probability Generation:</strong> Each model outputs probabilistic predictions for its specific outcome</li>
-                        <li><strong>Visualization:</strong> Results displayed as stacked bar plots with feature importance rankings</li>
-                        <li><strong>Clinical Integration:</strong> Predictions complement physician judgment for enhanced decision-making</li>
-                    </ul>
-                </div>
+                <h2>Workflow Process</h2>
+                <ul>
+                    <li><strong>Data Input:</strong> Clinicians enter demographic and clinical data through Shiny UI</li>
+                    <li><strong>Model Processing:</strong> Four Random Forest models process input data simultaneously</li>
+                    <li><strong>Probability Generation:</strong> Each model outputs probabilistic predictions for its specific outcome</li>
+                    <li><strong>Visualization:</strong> Results displayed as stacked bar plots with feature importance rankings</li>
+                    <li><strong>Clinical Integration:</strong> Predictions complement physician judgment for enhanced decision-making</li>
+                </ul>
                 
-                <div class="project-section">
-                    <h2>Clinical Applications & Disclaimers</h2>
-                    <ul>
-                        <li><strong>Decision Support:</strong> Provides probabilistic guidance for complex GI bleeding cases</li>
-                        <li><strong>Educational Tool:</strong> Demonstrates machine learning applications in clinical settings</li>
-                        <li><strong>Research Platform:</strong> Framework for developing additional clinical prediction models</li>
-                        <li><strong>Important Note:</strong> Intended as demonstration tool, not replacement for clinical judgment</li>
-                        <li><strong>Compliance:</strong> Users must ensure healthcare privacy law compliance with patient data</li>
-                        <li><strong>Validation:</strong> Not approved as medical device - requires clinical validation for deployment</li>
-                    </ul>
-                </div>
+                <h2>Clinical Applications & Disclaimers</h2>
+                <ul>
+                    <li><strong>Decision Support:</strong> Provides probabilistic guidance for complex GI bleeding cases</li>
+                    <li><strong>Educational Tool:</strong> Demonstrates machine learning applications in clinical settings</li>
+                    <li><strong>Research Platform:</strong> Framework for developing additional clinical prediction models</li>
+                    <li><strong>Important Note:</strong> Intended as demonstration tool, not replacement for clinical judgment</li>
+                    <li><strong>Compliance:</strong> Users must ensure healthcare privacy law compliance with patient data</li>
+                    <li><strong>Validation:</strong> Not approved as medical device - requires clinical validation for deployment</li>
+                </ul>
             </div>
         </div>
     </section>
