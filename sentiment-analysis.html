@@ -41,7 +41,7 @@
                 <h2>Model Performance Results</h2>
                 <div class="model-cards">
                     <div class="model-card">
-                        <h4>🏆 Best Performer: Logistic Regression</h4>
+                        <h4>Logistic Regression</h4>
                         <div class="model-stats">
                             <div class="stat"><span class="stat-label">Two-Class:</span> <span class="stat-value">93%</span></div>
                             <div class="stat"><span class="stat-label">Three-Class:</span> <span class="stat-value">86%</span></div>
@@ -50,7 +50,7 @@
                     </div>
                     
                     <div class="model-card">
-                        <h4>📚 VADER Sentiment Analyzer</h4>
+                        <h4>VADER Analyzer</h4>
                         <div class="model-stats">
                             <div class="stat"><span class="stat-label">Two-Class:</span> <span class="stat-value">90%</span></div>
                             <div class="stat"><span class="stat-label">Three-Class:</span> <span class="stat-value">78%</span></div>
@@ -59,7 +59,7 @@
                     </div>
                     
                     <div class="model-card">
-                        <h4>🌳 Decision Tree</h4>
+                        <h4>Decision Tree</h4>
                         <div class="model-stats">
                             <div class="stat"><span class="stat-label">Two-Class:</span> <span class="stat-value">88%</span></div>
                             <div class="stat"><span class="stat-label">Three-Class:</span> <span class="stat-value">80%</span></div>
@@ -73,107 +73,40 @@
                     <div class="pipeline-flow">
                         <div class="pipeline-stage">
                             <div class="stage-number">01</div>
-                            <div class="stage-box">
-                                <h4>Data Collection</h4>
-                                <div class="stage-details">
-                                    <span class="detail-item">Amazon Customer Reviews</span>
-                                    <span class="detail-item">Dataset: 2015-2020</span>
-                                    <span class="detail-item">20 Product Categories</span>
-                                </div>
-                            </div>
+                            <h4>Data Collection</h4>
+                            <p>Amazon Customer Reviews<br>Dataset: 2015-2020<br>20 Product Categories</p>
                             <div class="pipeline-connector"></div>
                         </div>
 
                         <div class="pipeline-stage">
                             <div class="stage-number">02</div>
-                            <div class="stage-box">
-                                <h4>Preprocessing</h4>
-                                <div class="stage-details">
-                                    <span class="detail-item">Text Cleaning</span>
-                                    <span class="detail-item">Star Rating Mapping</span>
-                                    <span class="detail-item">Data Normalization</span>
-                                </div>
-                            </div>
+                            <h4>Preprocessing</h4>
+                            <p>Text Cleaning<br>Star Rating Mapping<br>Data Normalization</p>
                             <div class="pipeline-connector"></div>
                         </div>
 
                         <div class="pipeline-stage">
                             <div class="stage-number">03</div>
-                            <div class="stage-box">
-                                <h4>Feature Extraction</h4>
-                                <div class="stage-details">
-                                    <span class="detail-item">TF-IDF Vectorization</span>
-                                    <span class="detail-item">CountVectorizer</span>
-                                    <span class="detail-item">Text to Numerical</span>
-                                </div>
-                            </div>
+                            <h4>Feature Extraction</h4>
+                            <p>TF-IDF Vectorization<br>CountVectorizer<br>Text to Numerical</p>
                             <div class="pipeline-connector"></div>
                         </div>
 
                         <div class="pipeline-stage">
                             <div class="stage-number">04</div>
-                            <div class="stage-box">
-                                <h4>Model Training</h4>
-                                <div class="stage-details">
-                                    <span class="detail-item">8 ML Algorithms</span>
-                                    <span class="detail-item">80% Training Data</span>
-                                    <span class="detail-item">Cross Validation</span>
-                                </div>
-                            </div>
+                            <h4>Model Training</h4>
+                            <p>8 ML Algorithms<br>80% Training Data<br>Cross Validation</p>
                             <div class="pipeline-connector"></div>
                         </div>
 
                         <div class="pipeline-stage">
                             <div class="stage-number">05</div>
-                            <div class="stage-box">
-                                <h4>Evaluation</h4>
-                                <div class="stage-details">
-                                    <span class="detail-item">20% Test Data</span>
-                                    <span class="detail-item">Performance Metrics</span>
-                                    <span class="detail-item">Model Comparison</span>
-                                </div>
-                            </div>
+                            <h4>Evaluation</h4>
+                            <p>20% Test Data<br>Performance Metrics<br>Model Comparison</p>
                         </div>
                     </div>
                 </div>
 
-                <div class="analysis-comparison">
-                    <h3>Classification Approaches</h3>
-                    <div class="comparison-grid">
-                        <div class="approach-card binary">
-                            <div class="approach-header">
-                                <div class="approach-label">Binary Classification</div>
-                                <div class="approach-accuracy">93.0%</div>
-                            </div>
-                            <div class="approach-content">
-                                <div class="classification-types">
-                                    <div class="class-item positive">Positive</div>
-                                    <div class="class-item negative">Negative</div>
-                                </div>
-                                <div class="approach-description">
-                                    Simplified sentiment analysis focusing on clear positive/negative distinction
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="approach-card ternary">
-                            <div class="approach-header">
-                                <div class="approach-label">Ternary Classification</div>
-                                <div class="approach-accuracy">86.0%</div>
-                            </div>
-                            <div class="approach-content">
-                                <div class="classification-types">
-                                    <div class="class-item positive">Positive</div>
-                                    <div class="class-item neutral">Neutral</div>
-                                    <div class="class-item negative">Negative</div>
-                                </div>
-                                <div class="approach-description">
-                                    More nuanced analysis including neutral sentiment detection
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
                 
                 <h2>Key Research Findings</h2>
                 <ul>
