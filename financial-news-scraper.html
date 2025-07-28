@@ -28,60 +28,142 @@
                 <h2>Project Overview</h2>
                 <p>A sophisticated Python-based scraping system that automatically downloads, parses, and processes daily financial bulletins from major Turkish brokerage firms. The system extracts company news items from PDF documents, performs intelligent ticker symbol matching against BIST-traded stocks, and aggregates all data into a structured CSV format for comprehensive financial analysis and market research.</p>
                 
-                <h2>Technical Stack</h2>
-                <ul>
-                    <li><strong>Programming Language:</strong> Python 3.7+</li>
-                    <li><strong>Web Automation:</strong> Selenium WebDriver with ChromeDriver</li>
-                    <li><strong>PDF Processing:</strong> pdfminer for text extraction</li>
-                    <li><strong>Data Processing:</strong> pandas, numpy</li>
-                    <li><strong>Web Requests:</strong> requests library</li>
-                    <li><strong>Fuzzy Matching:</strong> fuzzywuzzy for ticker symbol validation</li>
-                    <li><strong>Data Storage:</strong> CSV file format for structured data</li>
-                    <li><strong>Text Processing:</strong> Regular expressions for pattern matching</li>
-                </ul>
-                
-                <h2>Brokerage Firms Covered</h2>
-                <ul>
-                    <li><strong>Oyak Yatırım:</strong> Direct PDF download and parsing</li>
-                    <li><strong>Piramit Menkul Kıymetler:</strong> Selenium-based navigation and extraction</li>
-                    <li><strong>Tacirler Yatırım:</strong> Automated web browsing with Selenium</li>
-                    <li><strong>Vakıf Yatırım:</strong> Dynamic content handling with Selenium</li>
-                    <li><strong>Ziraat Yatırım:</strong> PDF processing with direct download</li>
-                </ul>
-                
-                <h2>Key Features & Workflow</h2>
-                <ul>
-                    <li>Automated daily PDF bulletin downloads from multiple brokerage websites</li>
-                    <li>PDF-to-text conversion using pdfminer for content extraction</li>
-                    <li>Regular expression-based parsing to identify "company news" sections</li>
-                    <li>Intelligent ticker symbol extraction and validation against BIST stock codes</li>
-                    <li>Fuzzy matching algorithms to ensure accurate symbol identification</li>
-                    <li>Structured data aggregation with timestamp and source tracking</li>
-                    <li>Master CSV file management for consolidated financial data</li>
-                    <li>Robust error handling for PDF format changes and website updates</li>
-                    <li>Logging system for monitoring daily operations and data availability</li>
-                </ul>
-                
-                <h2>Script Architecture</h2>
-                <ul>
-                    <li><strong>oyak_yatirim.py:</strong> Handles Oyak Yatırım bulletin downloads and parsing</li>
-                    <li><strong>piramit_yatirim.py:</strong> Selenium-based scraper for Piramit Menkul Kıymetler</li>
-                    <li><strong>tacirler_yatirim.py:</strong> Automated extraction from Tacirler Yatırım bulletins</li>
-                    <li><strong>vakif_yatirim.py:</strong> Dynamic content handling for Vakıf Yatırım</li>
-                    <li><strong>ziraat_yatirim.py:</strong> Direct download processing for Ziraat Yatırım</li>
-                    <li><strong>Shared CSV Database:</strong> Centralized storage for all extracted news items</li>
-                    <li><strong>BIST Ticker Reference:</strong> Master list for fuzzy matching validation</li>
-                </ul>
+                <h2>Scraping Pipeline</h2>
+                <div class="pipeline-container">
+                    <div class="pipeline-flow">
+                        <div class="pipeline-stage">
+                            <div class="stage-number">01</div>
+                            <h4>Web Navigation</h4>
+                            <p>Selenium WebDriver<br>Automated browsing<br>Dynamic content handling</p>
+                            <div class="pipeline-connector"></div>
+                        </div>
+
+                        <div class="pipeline-stage">
+                            <div class="stage-number">02</div>
+                            <h4>PDF Download</h4>
+                            <p>Daily bulletin retrieval<br>Direct downloads<br>Error handling</p>
+                            <div class="pipeline-connector"></div>
+                        </div>
+
+                        <div class="pipeline-stage">
+                            <div class="stage-number">03</div>
+                            <h4>Content Extraction</h4>
+                            <p>PDF text parsing<br>pdfminer processing<br>Pattern recognition</p>
+                            <div class="pipeline-connector"></div>
+                        </div>
+
+                        <div class="pipeline-stage">
+                            <div class="stage-number">04</div>
+                            <h4>Ticker Matching</h4>
+                            <p>BIST symbol validation<br>Fuzzy matching<br>Company identification</p>
+                            <div class="pipeline-connector"></div>
+                        </div>
+
+                        <div class="pipeline-stage">
+                            <div class="stage-number">05</div>
+                            <h4>Data Aggregation</h4>
+                            <p>CSV consolidation<br>Timestamp tracking<br>Source attribution</p>
+                        </div>
+                    </div>
+                </div>
+
+                <h2>Brokerage Firms Coverage</h2>
+                <div class="brokerage-container">
+                    <div class="brokerage-grid">
+                        <div class="brokerage-card direct">
+                            <div class="card-header">
+                                <h4>Oyak Yatırım</h4>
+                                <div class="method-badge">Direct</div>
+                            </div>
+                            <p>Direct PDF download and parsing with automated content extraction</p>
+                        </div>
+
+                        <div class="brokerage-card selenium">
+                            <div class="card-header">
+                                <h4>Piramit Menkul</h4>
+                                <div class="method-badge">Selenium</div>
+                            </div>
+                            <p>Selenium-based navigation and extraction for dynamic content</p>
+                        </div>
+
+                        <div class="brokerage-card selenium">
+                            <div class="card-header">
+                                <h4>Tacirler Yatırım</h4>
+                                <div class="method-badge">Selenium</div>
+                            </div>
+                            <p>Automated web browsing with Selenium for bulletin retrieval</p>
+                        </div>
+
+                        <div class="brokerage-card selenium">
+                            <div class="card-header">
+                                <h4>Vakıf Yatırım</h4>
+                                <div class="method-badge">Selenium</div>
+                            </div>
+                            <p>Dynamic content handling with advanced Selenium techniques</p>
+                        </div>
+
+                        <div class="brokerage-card direct">
+                            <div class="card-header">
+                                <h4>Ziraat Yatırım</h4>
+                                <div class="method-badge">Direct</div>
+                            </div>
+                            <p>PDF processing with direct download methodology</p>
+                        </div>
+                    </div>
+                </div>
                 
                 <h2>Technical Challenges & Solutions</h2>
-                <ul>
-                    <li><strong>PDF Format Variations:</strong> Implemented robust parsing with pdfminer to handle different bulletin layouts</li>
-                    <li><strong>Dynamic Web Content:</strong> Used Selenium WebDriver to handle JavaScript-heavy brokerage websites</li>
-                    <li><strong>Ticker Symbol Accuracy:</strong> Deployed fuzzywuzzy for intelligent matching against BIST reference data</li>
-                    <li><strong>Error Resilience:</strong> Built comprehensive exception handling for PDFSyntaxError and NoSuchElementException</li>
-                    <li><strong>Data Consistency:</strong> Standardized date/time formatting and source attribution across all scrapers</li>
-                    <li><strong>Website Changes:</strong> Modular design allows easy updates when brokerage sites modify their structure</li>
-                </ul>
+                <div class="challenges-container">
+                    <div class="challenges-grid">
+                        <div class="challenge-card">
+                            <div class="challenge-header">
+                                <h4>PDF Format Variations</h4>
+                                <div class="solution-badge">pdfminer</div>
+                            </div>
+                            <p>Implemented robust parsing to handle different bulletin layouts and format inconsistencies across firms</p>
+                        </div>
+
+                        <div class="challenge-card">
+                            <div class="challenge-header">
+                                <h4>Dynamic Web Content</h4>
+                                <div class="solution-badge">Selenium</div>
+                            </div>
+                            <p>Used WebDriver to handle JavaScript-heavy brokerage websites with complex navigation</p>
+                        </div>
+
+                        <div class="challenge-card">
+                            <div class="challenge-header">
+                                <h4>Ticker Symbol Accuracy</h4>
+                                <div class="solution-badge">fuzzywuzzy</div>
+                            </div>
+                            <p>Deployed intelligent matching algorithms against BIST reference data for accurate identification</p>
+                        </div>
+
+                        <div class="challenge-card">
+                            <div class="challenge-header">
+                                <h4>Error Resilience</h4>
+                                <div class="solution-badge">Exception Handling</div>
+                            </div>
+                            <p>Built comprehensive handling for PDFSyntaxError and NoSuchElementException scenarios</p>
+                        </div>
+
+                        <div class="challenge-card">
+                            <div class="challenge-header">
+                                <h4>Data Consistency</h4>
+                                <div class="solution-badge">Standardization</div>
+                            </div>
+                            <p>Standardized date/time formatting and source attribution across all scraper modules</p>
+                        </div>
+
+                        <div class="challenge-card">
+                            <div class="challenge-header">
+                                <h4>Website Changes</h4>
+                                <div class="solution-badge">Modular Design</div>
+                            </div>
+                            <p>Modular architecture allows easy updates when brokerage sites modify their structure</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>

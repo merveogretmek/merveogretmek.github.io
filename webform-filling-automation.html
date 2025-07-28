@@ -28,71 +28,191 @@
                 <h2>Project Overview</h2>
                 <p>A specialized Selenium-based automation script designed specifically for real estate property assessment webforms. This tool automates the complex, multi-section data entry process for property evaluations, streamlining workflows for real estate professionals and property assessors. The system navigates through comprehensive property assessment forms, accurately entering data from structured datasets while handling dynamic web elements and form validation requirements.</p>
                 
-                <h2>Technical Stack</h2>
-                <ul>
-                    <li><strong>Programming Language:</strong> Python 3.7+</li>
-                    <li><strong>Web Automation:</strong> Selenium WebDriver</li>
-                    <li><strong>Browser Management:</strong> webdriver_manager for automatic ChromeDriver installation</li>
-                    <li><strong>Data Processing:</strong> pandas for dataset management</li>
-                    <li><strong>Numerical Operations:</strong> numpy for data manipulation</li>
-                    <li><strong>Browser Support:</strong> Google Chrome with ChromeDriver</li>
-                    <li><strong>Error Handling:</strong> Selenium explicit waits and exception management</li>
-                </ul>
-                
-                <h2>Automated Form Sections</h2>
-                <ul>
-                    <li><strong>Building Details:</strong> Property address, postcode, assessment date, and related party disclosure</li>
-                    <li><strong>Classification:</strong> Tenure, transaction type, built form, and detachment position</li>
-                    <li><strong>General Information:</strong> Fireplaces, habitable rooms, heated basement, and ventilation systems</li>
-                    <li><strong>Dimensions:</strong> Floor areas, room heights, loss perimeters, and party wall measurements</li>
-                    <li><strong>Flats and Maisonettes:</strong> Heat loss corridors, building parts, and floor level specifications</li>
-                    <li><strong>Structural Elements:</strong> Walls, windows, doors, floors, and roof construction details</li>
-                    <li><strong>Heating Systems:</strong> Main heating, secondary heating, and water heating system configurations</li>
-                    <li><strong>Special Features:</strong> Additional property characteristics and appendix requirements</li>
-                </ul>
+                <h2>Automation Pipeline</h2>
+                <div class="pipeline-container">
+                    <div class="pipeline-flow">
+                        <div class="pipeline-stage">
+                            <div class="stage-number">01</div>
+                            <h4>Portal Login</h4>
+                            <p>Secure authentication<br>Credential management<br>Session initialization</p>
+                            <div class="pipeline-connector"></div>
+                        </div>
+
+                        <div class="pipeline-stage">
+                            <div class="stage-number">02</div>
+                            <h4>Data Loading</h4>
+                            <p>Pandas DataFrame<br>Property data mapping<br>Field validation</p>
+                            <div class="pipeline-connector"></div>
+                        </div>
+
+                        <div class="pipeline-stage">
+                            <div class="stage-number">03</div>
+                            <h4>Form Navigation</h4>
+                            <p>Section progression<br>Dynamic waiting<br>Element detection</p>
+                            <div class="pipeline-connector"></div>
+                        </div>
+
+                        <div class="pipeline-stage">
+                            <div class="stage-number">04</div>
+                            <h4>Data Entry</h4>
+                            <p>Automated field filling<br>Dropdown selections<br>Checkbox handling</p>
+                            <div class="pipeline-connector"></div>
+                        </div>
+
+                        <div class="pipeline-stage">
+                            <div class="stage-number">05</div>
+                            <h4>Form Submission</h4>
+                            <p>Validation checks<br>Error recovery<br>Final submission</p>
+                        </div>
+                    </div>
+                </div>
+
+                <h2>Property Assessment Form Sections</h2>
+                <div class="sections-container">
+                    <div class="sections-grid">
+                        <div class="section-card building">
+                            <div class="section-icon">🏠</div>
+                            <h4>Building Details</h4>
+                            <p>Property address, postcode, assessment date, and related party disclosure</p>
+                        </div>
+
+                        <div class="section-card classification">
+                            <div class="section-icon">📋</div>
+                            <h4>Classification</h4>
+                            <p>Tenure, transaction type, built form, and detachment position</p>
+                        </div>
+
+                        <div class="section-card general">
+                            <div class="section-icon">ℹ️</div>
+                            <h4>General Information</h4>
+                            <p>Fireplaces, habitable rooms, heated basement, and ventilation systems</p>
+                        </div>
+
+                        <div class="section-card dimensions">
+                            <div class="section-icon">📐</div>
+                            <h4>Dimensions</h4>
+                            <p>Floor areas, room heights, loss perimeters, and party wall measurements</p>
+                        </div>
+
+                        <div class="section-card flats">
+                            <div class="section-icon">🏢</div>
+                            <h4>Flats & Maisonettes</h4>
+                            <p>Heat loss corridors, building parts, and floor level specifications</p>
+                        </div>
+
+                        <div class="section-card structural">
+                            <div class="section-icon">🧱</div>
+                            <h4>Structural Elements</h4>
+                            <p>Walls, windows, doors, floors, and roof construction details</p>
+                        </div>
+
+                        <div class="section-card heating">
+                            <div class="section-icon">🔥</div>
+                            <h4>Heating Systems</h4>
+                            <p>Main heating, secondary heating, and water heating system configurations</p>
+                        </div>
+
+                        <div class="section-card features">
+                            <div class="section-icon">⭐</div>
+                            <h4>Special Features</h4>
+                            <p>Additional property characteristics and appendix requirements</p>
+                        </div>
+                    </div>
+                </div>
                 
                 <h2>Key Automation Features</h2>
-                <ul>
-                    <li>Automated login to real estate management portal</li>
-                    <li>Sequential navigation through complex multi-section forms</li>
-                    <li>Dynamic waiting mechanisms for page load optimization</li>
-                    <li>Robust exception handling for element interaction failures</li>
-                    <li>Automatic ChromeDriver installation and management</li>
-                    <li>Data mapping from pandas DataFrame to form fields</li>
-                    <li>Form validation and error recovery mechanisms</li>
-                    <li>Save and exit functionality with proper form submission</li>
-                </ul>
-                
-                <h2>Technical Implementation</h2>
-                <ul>
-                    <li><strong>webform_filler.py:</strong> Main automation script containing all form handling logic</li>
-                    <li><strong>Login Management:</strong> Secure credential handling for portal access</li>
-                    <li><strong>Section Navigation:</strong> Systematic progression through 12+ form sections</li>
-                    <li><strong>Data Integration:</strong> Seamless pandas DataFrame to web form mapping</li>
-                    <li><strong>Element Interaction:</strong> Dropdown selections, text inputs, and checkbox handling</li>
-                    <li><strong>Wait Strategies:</strong> Explicit waits for reliable element interaction</li>
-                    <li><strong>Exception Management:</strong> Comprehensive error handling for common Selenium issues</li>
-                </ul>
-                
+                <div class="automation-container">
+                    <div class="automation-grid">
+                        <div class="automation-card login">
+                            <div class="automation-icon">🔐</div>
+                            <h4>Portal Authentication</h4>
+                            <p>Automated login to real estate management portal with secure credential handling</p>
+                        </div>
+
+                        <div class="automation-card navigation">
+                            <div class="automation-icon">🧭</div>
+                            <h4>Smart Navigation</h4>
+                            <p>Sequential navigation through complex multi-section forms with dynamic waiting</p>
+                        </div>
+
+                        <div class="automation-card data">
+                            <div class="automation-icon">📊</div>
+                            <h4>Data Integration</h4>
+                            <p>Seamless mapping from pandas DataFrame to web form fields with validation</p>
+                        </div>
+
+                        <div class="automation-card interaction">
+                            <div class="automation-icon">🖱️</div>
+                            <h4>Element Interaction</h4>
+                            <p>Dropdown selections, text inputs, and checkbox handling with error recovery</p>
+                        </div>
+
+                        <div class="automation-card driver">
+                            <div class="automation-icon">🚗</div>
+                            <h4>Driver Management</h4>
+                            <p>Automatic ChromeDriver installation and management for hassle-free setup</p>
+                        </div>
+
+                        <div class="automation-card submission">
+                            <div class="automation-icon">✅</div>
+                            <h4>Form Submission</h4>
+                            <p>Save and exit functionality with proper form submission and validation</p>
+                        </div>
+                    </div>
+                </div>
+
                 <h2>Real Estate Applications</h2>
-                <ul>
-                    <li><strong>Property Assessments:</strong> Automated completion of energy performance certificates</li>
-                    <li><strong>Building Surveys:</strong> Streamlined data entry for structural assessments</li>
-                    <li><strong>Compliance Forms:</strong> Efficient handling of regulatory documentation</li>
-                    <li><strong>Portfolio Management:</strong> Bulk property data processing for real estate firms</li>
-                    <li><strong>Quality Control:</strong> Consistent data entry reducing human error</li>
-                    <li><strong>Time Efficiency:</strong> Significant reduction in administrative overhead</li>
-                </ul>
-                
-                <h2>Installation & Usage</h2>
-                <ul>
-                    <li><strong>Prerequisites:</strong> Python 3.7+, Google Chrome browser</li>
-                    <li><strong>Dependencies:</strong> selenium, webdriver_manager, pandas, numpy</li>
-                    <li><strong>Configuration:</strong> Update credentials and prepare structured input data</li>
-                    <li><strong>Execution:</strong> Single script run automates entire form completion process</li>
-                    <li><strong>Data Format:</strong> Expects pandas DataFrame with specific column mapping</li>
-                    <li><strong>Output:</strong> Completed and submitted property assessment forms</li>
-                </ul>
+                <div class="applications-container">
+                    <div class="applications-grid">
+                        <div class="application-card assessment">
+                            <div class="app-header">
+                                <h4>Property Assessments</h4>
+                                <div class="app-badge">EPC</div>
+                            </div>
+                            <p>Automated completion of energy performance certificates for property evaluations</p>
+                        </div>
+
+                        <div class="application-card survey">
+                            <div class="app-header">
+                                <h4>Building Surveys</h4>
+                                <div class="app-badge">Structural</div>
+                            </div>
+                            <p>Streamlined data entry for structural assessments and building condition reports</p>
+                        </div>
+
+                        <div class="application-card compliance">
+                            <div class="app-header">
+                                <h4>Compliance Forms</h4>
+                                <div class="app-badge">Regulatory</div>
+                            </div>
+                            <p>Efficient handling of regulatory documentation and compliance requirements</p>
+                        </div>
+
+                        <div class="application-card portfolio">
+                            <div class="app-header">
+                                <h4>Portfolio Management</h4>
+                                <div class="app-badge">Bulk</div>
+                            </div>
+                            <p>Bulk property data processing for real estate firms and property managers</p>
+                        </div>
+
+                        <div class="application-card quality">
+                            <div class="app-header">
+                                <h4>Quality Control</h4>
+                                <div class="app-badge">Accuracy</div>
+                            </div>
+                            <p>Consistent data entry reducing human error and improving data reliability</p>
+                        </div>
+
+                        <div class="application-card efficiency">
+                            <div class="app-header">
+                                <h4>Time Efficiency</h4>
+                                <div class="app-badge">Speed</div>
+                            </div>
+                            <p>Significant reduction in administrative overhead and processing time</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
