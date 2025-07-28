@@ -108,7 +108,7 @@ body {
     transform: translateY(100%);
     opacity: 0;
     display: inline-block;
-    max-width: fit-content;
+    width: 700px;
     line-height: 1.1;
 }
 
@@ -224,6 +224,11 @@ body {
 }
 
 @media (max-width: 768px) {
+    .code-snippet {
+        width: 450px;
+        font-size: 0.8rem;
+    }
+    
     .navigation-cards {
         grid-template-columns: repeat(2, 1fr);
         gap: 15px;
@@ -244,6 +249,12 @@ body {
 }
 
 @media (max-width: 480px) {
+    .code-snippet {
+        width: 320px;
+        font-size: 0.7rem;
+        padding: 6px 10px;
+    }
+    
     .navigation-cards {
         grid-template-columns: 1fr;
         gap: 12px;
@@ -370,11 +381,20 @@ body {
 }
 
 /* Project Container */
+.project-container-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.project-container-link:not(:first-child) {
+    margin-top: 40px;
+}
+
 .project-container {
     display: flex;
     align-items: center;
     gap: 30px;
-    margin-top: 40px;
     padding: 30px;
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(10px);
@@ -384,7 +404,7 @@ body {
     transition: all 0.3s ease;
 }
 
-.project-container:hover {
+.project-container-link:hover .project-container {
     background: rgba(255, 255, 255, 0.15);
     border-color: rgba(255, 255, 255, 0.3);
     transform: translateY(-5px);
@@ -423,15 +443,12 @@ body {
 
 .project-link {
     color: white;
-    text-decoration: underline;
-    text-decoration-color: rgba(255, 255, 255, 0.7);
-    text-underline-offset: 4px;
+    text-decoration: none;
     transition: all 0.3s ease;
 }
 
 .project-link:hover {
     color: rgba(255, 255, 255, 0.8);
-    text-decoration-color: white;
     text-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
 }
 
@@ -491,10 +508,13 @@ body {
 }
 
 @media (max-width: 480px) {
+    .project-container-link:not(:first-child) {
+        margin-top: 30px;
+    }
+    
     .project-container {
         padding: 15px;
         gap: 15px;
-        margin-top: 30px;
     }
     
     .project-image {
